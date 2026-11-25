@@ -1,0 +1,168 @@
+CREATE GLOBAL CUBE [JodieProjectCube] STORAGE 'JodieProjectCube.cub' FROM [JodieProjectCube]
+(
+	MEASURE [JodieProjectCube].[Quantity],
+	MEASURE [JodieProjectCube].[Revenue],
+	MEASURE [JodieProjectCube].[Profit],
+	MEASURE [JodieProjectCube].[Selling Cost],
+	MEASURE [JodieProjectCube].[Price],
+	MEASURE [JodieProjectCube].[Commision],
+	MEASURE [JodieProjectCube].[Sales Fact Count],
+
+	DIMENSION [JodieProjectCube].[Customer Dim].[City]
+	(
+		LEVEL [(All)],
+		LEVEL [City]
+	),
+	DIMENSION [JodieProjectCube].[Customer Dim].[Country]
+	(
+		LEVEL [(All)],
+		LEVEL [Country]
+	),
+	DIMENSION [JodieProjectCube].[Customer Dim].[Customer ID]
+	(
+		LEVEL [(All)],
+		LEVEL [Customer ID]
+	),
+	DIMENSION [JodieProjectCube].[Customer Dim].[Hierarchy]
+	(
+		LEVEL [(All)],
+		LEVEL [Country],
+		LEVEL [City],
+		LEVEL [Street Address]
+	),
+	DIMENSION [JodieProjectCube].[Customer Dim].[Street Address]
+	(
+		LEVEL [(All)],
+		LEVEL [Street Address]
+	),
+	DIMENSION [JodieProjectCube].[Officer Dim].[City]
+	(
+		LEVEL [(All)],
+		LEVEL [City]
+	),
+	DIMENSION [JodieProjectCube].[Officer Dim].[Country]
+	(
+		LEVEL [(All)],
+		LEVEL [Country]
+	),
+	DIMENSION [JodieProjectCube].[Officer Dim].[Email]
+	(
+		LEVEL [(All)],
+		LEVEL [Email]
+	),
+	DIMENSION [JodieProjectCube].[Officer Dim].[First Name]
+	(
+		LEVEL [(All)],
+		LEVEL [First Name]
+	),
+	DIMENSION [JodieProjectCube].[Officer Dim].[Hierarchy]
+	(
+		LEVEL [(All)],
+		LEVEL [Country],
+		LEVEL [City],
+		LEVEL [Zip Code],
+		LEVEL [Store Name],
+		LEVEL [First Name]
+	),
+	DIMENSION [JodieProjectCube].[Officer Dim].[Officer ID]
+	(
+		LEVEL [(All)],
+		LEVEL [Officer ID]
+	),
+	DIMENSION [JodieProjectCube].[Officer Dim].[Phone Number]
+	(
+		LEVEL [(All)],
+		LEVEL [Phone Number]
+	),
+	DIMENSION [JodieProjectCube].[Officer Dim].[Store ID]
+	(
+		LEVEL [(All)],
+		LEVEL [Store ID]
+	),
+	DIMENSION [JodieProjectCube].[Officer Dim].[Store Name]
+	(
+		LEVEL [(All)],
+		LEVEL [Store Name]
+	),
+	DIMENSION [JodieProjectCube].[Officer Dim].[Zip Code]
+	(
+		LEVEL [(All)],
+		LEVEL [Zip Code]
+	),
+	DIMENSION [JodieProjectCube].[Product Dim].[Brand]
+	(
+		LEVEL [(All)],
+		LEVEL [Brand]
+	),
+	DIMENSION [JodieProjectCube].[Product Dim].[Category]
+	(
+		LEVEL [(All)],
+		LEVEL [Category]
+	),
+	DIMENSION [JodieProjectCube].[Product Dim].[Hierarchy]
+	(
+		LEVEL [(All)],
+		LEVEL [Category],
+		LEVEL [Name]
+	),
+	DIMENSION [JodieProjectCube].[Product Dim].[Name]
+	(
+		LEVEL [(All)],
+		LEVEL [Name]
+	),
+	DIMENSION [JodieProjectCube].[Product Dim].[Product ID]
+	(
+		LEVEL [(All)],
+		LEVEL [Product ID]
+	),
+	DIMENSION [JodieProjectCube].[Time Dim].[Date]
+	(
+		LEVEL [(All)],
+		LEVEL [Date]
+	),
+	DIMENSION [JodieProjectCube].[Time Dim].[Day]
+	(
+		LEVEL [(All)],
+		LEVEL [Day]
+	),
+	DIMENSION [JodieProjectCube].[Time Dim].[Day Of Week]
+	(
+		LEVEL [(All)],
+		LEVEL [Day Of Week]
+	),
+	DIMENSION [JodieProjectCube].[Time Dim].[Hierarchy]
+	(
+		LEVEL [(All)],
+		LEVEL [Year],
+		LEVEL [Quarter],
+		LEVEL [Month],
+		LEVEL [Date]
+	),
+	DIMENSION [JodieProjectCube].[Time Dim].[Month]
+	(
+		LEVEL [(All)],
+		LEVEL [Month]
+	),
+	DIMENSION [JodieProjectCube].[Time Dim].[Quarter]
+	(
+		LEVEL [(All)],
+		LEVEL [Quarter]
+	),
+	DIMENSION [JodieProjectCube].[Time Dim].[Time ID]
+	(
+		LEVEL [(All)],
+		LEVEL [Time ID]
+	),
+	DIMENSION [JodieProjectCube].[Time Dim].[Week]
+	(
+		LEVEL [(All)],
+		LEVEL [Week]
+	),
+	DIMENSION [JodieProjectCube].[Time Dim].[Year]
+	(
+		LEVEL [(All)],
+		LEVEL [Year]
+	)
+
+)
+
